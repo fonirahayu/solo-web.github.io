@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+        background-image: url("white.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+        h3 {
+            margin-top: 10%;
+            margin-left: 35px;
+            font-weight: 700;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 30px;
+        }
+        h4 {
+            margin-left: 35px;
+            font-weight: 300;
+            font-size: 25px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        *,
+        *::before,
+        *::after {
+        box-sizing: border-box;
+        }
+
+        :root{
+            --bg-color: #D8D8D8;
+        }
+        h1{
+        font-size: 3em;
+        font-weight: normal;
+        text-align: center;
+        margin-top: 50px;
+        }
+
+        /* title styles */
+        .home-title span{
+            position: relative;
+            overflow: hidden;
+            display: block;
+            line-height: 1.2;
+        }
+
+        .home-title span::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            animation: a-ltr-after 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(-101%);
+        }
+
+        .home-title span::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            animation: a-ltr-before 2s cubic-bezier(.77,0,.18,1) forwards;
+            transform: translateX(0);
+        }
+
+        .home-title span:nth-of-type(1)::before,
+        .home-title span:nth-of-type(1)::after{
+            animation-delay: 1s;
+        }
+
+        .home-title span:nth-of-type(2)::before,
+        .home-title span:nth-of-type(2)::after{
+            animation-delay: 1.5s;
+        }
+
+        @keyframes a-ltr-after{
+            0% {transform: translateX(-100%)}
+            100% {transform: translateX(101%)}
+        }
+
+        @keyframes a-ltr-before{
+            0% {transform: translateX(0)}
+            100% {transform: translateX(200%)}
+        }
+    </style>
+<body>
+    <h1 class="home-title"> 
+        <span style="font-size: 30px;">E X P E R I E N C E</span>
+    </h1>
+    <h3><u> PHP Developer (2020 - present)</u></h3>
+    <h4>Mengembangkan aplikasi berbasis web seperti aplikasi web teller dan internet banking bisnis yang berfokus pada pengembangan frontend</h4>
+</body>
+</head>
+</html>
